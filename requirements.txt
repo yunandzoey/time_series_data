@@ -1,0 +1,12 @@
+numpy==1.24.0
+matplotlib==3.6.2
+scikit-learn==1.2.0
+pandas==1.5.2
+statsmodels==0.14.0
+unittest2==1.1.0
+pmdarima==2.0.3
+seaborn==0.12.0
+xgboost==1.7.5
+plotly==5.15.0
+hvplot==0.8.4
+skforecast==0.8.1
