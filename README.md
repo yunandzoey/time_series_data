@@ -25,17 +25,21 @@
 - XGBoost: hour.csv
 - exongenous features: weekday, weather, holiday
 ### Model Results
-- Statistical model
+- Statistical model with daily data
     - ARIMA: 
         - order = (1, 1, 1) with auto_arima
         - AIC: 9927.707, RMSE: 845.579
     - SARIMA: 
         - orser = (1, 1, 1), (1, 1, 1, 14) by grid search
         - AIC: 9743.914, RMSE: 855.621
-    - SARIMA with exogenous features:
-        - orser = (1, 1, 1), (1, 1, 1, 14)
-        - AIC: 9582.199, RMSE: 741.800
-- Regression Algorithm: 
+- Statistical model with monthly data
+    - ARIMA: 
+        - order = (1, 1, 0) with auto_arima
+        - AIC: 431.572, RMSE: 20064.092
+    - SARIMA: 
+        - orser = (1, 1, 0), (4, 1, 0, 4) by grid search
+        - AIC: 337.610, RMSE: 20127.931
+- Regression Algorithm with hourly data
     - XGBoost with backtesting:
         - parameter: 'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 500 by grid_search_forecaster
         - RMSE: 100.357
