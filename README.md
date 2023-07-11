@@ -20,9 +20,11 @@
 - xgboost
 - sklearn
 - skforecast
+- keras
 ### Data Preparation
 - ARIMA/SARIMA: day.csv
 - XGBoost: hour.csv
+- RNN / LSTM: day.csv
 - exongenous features: weekday, weather, holiday
 ### Model Results
 - Statistical model with daily data
@@ -45,4 +47,22 @@
         - RMSE: 100.357
     - XGBoost with backtesting and exogenous features:
         - parameter: 'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 500 by grid_search_forecaster
-        - RMSE: 83.086
+        - RMSE: 72.370
+- Deep Learning
+    - simpleRNN
+        - Nodes: 4
+        - Total Parameters: 93
+        - Activation Function: relu for RNN and Output layer
+        - Optimizer: adam
+        - Loss function: mse
+        - Learning rate: 0.0001
+        - ecpocs: 1000
+        - Correctness: 10.20%
+    - LSTM
+        - Nodes: 100
+        - Total Parameters: 47301
+        - Activation Function: relu
+        - Optimizer: adam
+        - Loss function: mse
+        - ecpocs: 300
+        - Correctness: 54.64%
